@@ -14,8 +14,7 @@ class RealSubjectImpl implements RealSubject {
 }
 
 
-// Proxy class. Lazy loading subject
-class Proxy implements RealSubject {
+class LazyLoadingSubject implements RealSubject {
     private RealSubject realSubject;
 
     @Override
@@ -34,16 +33,19 @@ class Proxy implements RealSubject {
         // Additional logic after forwarding the request to the RealSubject
         System.out.println("Proxy: Performing some additional logic after calling RealSubject.");
     }
+}
+
+
+class Proxy {
+
 
     public static void main(String[] args) {
-        // Using the RealSubject directly
         RealSubject realSubject = new RealSubjectImpl();
         realSubject.request();
 
         System.out.println("------------------------");
 
-        // Using the Proxy to control access to the RealSubject
-        Proxy proxy = new Proxy();
+        LazyLoadingSubject proxy = new LazyLoadingSubject();
         proxy.request();
     }
 }
