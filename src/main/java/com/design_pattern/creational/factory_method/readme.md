@@ -12,3 +12,5 @@ Tạo ra một interface cho việc khởi tạo object, cho phép các class co
 ### HẠN CHẾ:
 
 -   Tăng độ phức tạp của code base, có thể dẫn đễn việc class explosion.
+e.g:
+https://www.binpress.com/factory-design-pattern/?fbclid=IwAR0Ix1EGTyqn1VyNJecAV6paPr1c3YFDqovs-3ZH5E_WF3hlLS0nSzEMsGo
